@@ -1,6 +1,3 @@
-
-let tasks = []
-
 // Yeni bir öğe ekleme fonksiyonu
 function newElement() {
     // Yeni bir öğe için bir li elementi oluştur
@@ -61,10 +58,10 @@ list.onclick = function(event) {
         tasks.splice(index, 1);
         // Yapılacaklar listesini stringe dönüştür
         let tasksString = JSON.stringify(tasks);
-        // Yapılacaklar listesini localStorage'a kaydet
+        // Yapılacaklar listesini localStorage'a kaydeti
         localStorage.setItem("tasks", tasksString);
       } else {
-        // Seçilmemişse, span elementinin tıklama olayını engelle
+        // Seçilmemişse, span elementinin tıklama olayını engeller
         event.preventDefault();
       }
     }
